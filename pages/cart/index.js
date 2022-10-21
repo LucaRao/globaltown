@@ -153,10 +153,7 @@ Page({
           cartTotal.checkedGoodsCount += i.number;
           cartTotal.checkedGoodsAmount += i.retail_price * i.number
       })
-      that.setData({
-        cartGoods: data.data,
-        cartTotal: cartTotal
-      });
+      that.getCartList()
       // let cartItem = that.data.cartGoods[itemIndex];
       // cartItem.number = number;
       that.getCartNum();
