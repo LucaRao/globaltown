@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+        <view class='head-wrap' wx:if="{{hasUserInfo == 0}}">
+            <view class="no-login-avatar">
+                <view class='no-avatar'>
+                    <image class='avatar' src="/images/default_avatar_big.png"></image>
+                </view>
+                <button class='btn-login' bindtap="getUserProfile"> 点我登录 </button>
+            </view>
+        </view>
+        <view class='head-wrap' wx:else >
+            <view class="head-l">
+                <view class='l'>
+                    <image class='avatar' src="{{touxing_img}}"></image>
+                </view>
+                <view class='r'>
+                    <view class='t'>
+                        <view class='name'>{{name}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="head-r">
+                <view class="arrow"></view>
+            </view>
+        </view>
+    </view>
+  <view class="info_list">
+    <block wx:for="{{userListInfo}}">
+        <view class="weui_cell" bindtap="goDetail" data-name="{{item.text}}">
+            <view class="weui_cell_hd"><image src="{{item.icon}}"></image></view>
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p"> {{item.text}} </view>
+            </view>
+            <view class="with_arrow"></view>
+        </view>
+    </block>
+  </view>
+</view>

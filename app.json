@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classify/index",
+    "pages/cart/index",
+    "pages/my/index",
+    "pages/details/index",
+    "pages/brand/index",
+    "pages/list/index",
+    "pages/order-check/index",
+    "pages/address/index",
+    "pages/order-list/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "环球商城",
+    "navigationBarBackgroundColor": "#fff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#ff3456",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon-index-b.png",
+        "selectedIconPath": "images/icon-index-r.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/classify/index",
+        "iconPath": "images/icon-cate-off.png",
+        "selectedIconPath": "images/icon-cate-on.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "iconPath": "images/icon-cart-b.png",
+        "selectedIconPath": "images/icon-cart-r.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "images/icon-center-b.png",
+        "selectedIconPath": "images/icon-center-r.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

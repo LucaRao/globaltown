@@ -1,0 +1,22 @@
+{
+  "name": "wechat-weapp-mall",
+  "version": "1.0.0",
+  "description": "微信小程序：实现一个移动端商城",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuxuanqiang/wechat-weapp-mall.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuxuanqiang/wechat-weapp-mall/issues"
+  },
+  "homepage": "https://github.com/liuxuanqiang/wechat-weapp-mall#readme",
+  "dependencies": {
+    "supabase-wechat-stable": "^0.2.1"
+  }
+}

@@ -1,0 +1,60 @@
+<view class="container">
+
+    <view>
+        <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{goodsPicsInfo}}">
+                <swiper-item>
+                    <image src="{{item.picurl}}" class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <view class="shopping_container">
+        <view class='info-wrap'>
+        <view class='l'>
+            <view class='goods-title'>{{goodsPicsInfo[0].title}}</view>
+            <view class='goods-intro'>{{goodsPicsInfo[0].detail}}</view>
+        </view>
+    </view>
+
+        <view class='price-info'>
+        <view class="l">
+            <view class="now-price">
+                <view class="sym">¥</view>
+                <view class="num">{{goodsPicsInfo[0].ourprice}}</view>
+            </view>
+        </view>
+    </view>
+    </view>
+
+    <view class="cart-add-box">
+        <view class='l'>
+            <view class='left-icon form-button' bindtap='goIndexPage'>
+                <form report-submit="true">
+                    <button formType="submit" class='index-btn' hover-class="none">
+                        <image class='icon' src='/images/icon-index-b.png'></image>
+                        <view class='icon-text'>主页</view>
+                    </button>
+                </form>
+            </view>
+            <!-- <button class='left-icon contact-button' session-from='{"nickName":"{{userInfo.nickname}}","avatarUrl":"{{userInfo.avatar}}"}' open-type="contact" show-message-card="true" hover-class="none">
+                <image class='icon' src='/images/chat.png'></image>
+                <view class='icon-text'>客服</view>
+            </button> -->
+            <view class="left-icon" bindtap='openCartPage'>
+                <!-- <text class="cart-count">{{cartGoodsCount}}</text> -->
+                <image class='icon' src='/images/icon-cart-b.png'></image>
+                <view class='icon-text'>购物车</view>
+            </view>
+        </view>
+        <block>
+            <block>
+                <view class="to-cart-btn" bindtap='addToCart'>加入购物车</view>
+                <view class="to-pay-btn" bindtap='fastToCart'>立即购买</view>
+
+            </block>
+        </block>
+    </view>
+
+</view>

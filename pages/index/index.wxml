@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container">
+    <view>
+        <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+                autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
+            <block wx:for="{{swiperItems}}">
+                <swiper-item>
+                    <navigator url="../details/index?id={{item.id}}">
+                    <image src="{{item.picurl}}" class="slide-image"/>
+                    </navigator>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <view class="category-title">
+                <view class="title">
+                    <view class="text1">主题馆</view>
+                    <view class="line"></view>
+                </view>
+            </view>
+    
+    <view class="venues_box">
+        <view class="type_list">
+            <block wx:for="{{venuesItems}}">
+                <view class="venues_item">
+                    <navigator url="../brand/index?id={{item.id}}">
+                        <image src="{{item.smallpic}}"/>
+                    </navigator>
+                </view>
+            </block>
+        </view>
+    </view>
+
+    <view class="category-title">
+                <view class="title">
+                    <view class="text1">环球精选</view>
+                    <view class="line"></view>
+                </view>
+            </view>
+
+    <view class="choice_box">
+        <view class="choice_list">
+            <block wx:for="{{choiceItems}}">
+                <navigator url="../details/index?id={{item.id}}">
+                    <view class="choice_item">
+                        <image src="{{item.picurl}}"/>
+                        <view class="title">{{item.bigname}} <text class="h">￥ {{item.ourprice}}</text></view>
+                    </view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+
+    <loading hidden="{{loadingHidden}}">
+        加载中...
+    </loading>
+
+</view>
