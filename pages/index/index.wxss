@@ -88,6 +88,7 @@ view.text text {
     font-weight: bold;
     text-align: center;
     color: #333;
+    margin-top: 25rpx;
 }
 .category-title {
     padding: 0 20rpx;
@@ -118,4 +119,39 @@ view.text text {
     width: 30rpx;
     border-radius: 100rpx;
     background: #ff3456;
+}
+.catalog-wrap {
+    margin: 20rpx 0;
+    width: 100%;
+    height: 144rpx;
+    box-sizing: border-box;
+}
+
+.catalog-wrap .first {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-wrap .icon-navi {
+    width: 100rpx;
+    /* height: 160rpx; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.catalog-wrap .icon-img {
+    height: 70rpx;
+    width: 70rpx;
+}
+
+.catalog-wrap .icon-text {
+    width: 100%;
+    text-align: center;
+    font-size: 22rpx;
+    margin-top: 10rpx;
 }
