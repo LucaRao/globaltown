@@ -1,0 +1,96 @@
+<!--
+此文件为开发者工具生成，生成时间: 2022/10/25 上午10:23:03
+使用方法：
+在 D:\project\商城小程序\globaltown\pages\index\index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\project\商城小程序\globaltown\pages\index\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="container">
+      <view>
+        <swiper autoplay="false" class="swiper_box" duration="1000" indicator-dots="true" interval="3000" current="0">
+          <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+            <navigator>
+              <image class="slide-image sk-image"></image>
+            </navigator>
+          </swiper-item>
+        </swiper>
+      </view>
+      <view class="category-title">
+        <view class="title">
+          <view class="text1 sk-transparent sk-text-25-0000-709 sk-text">主题馆</view>
+          <view class="line"></view>
+        </view>
+      </view>
+      <swiper class="catalog-wrap" indicator-active-color="#e00000" indicator-color="#dedede" current="0" autoplay="false">
+        <swiper-item class="first" style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+          <view class="icon-navi" data-cateid="1">
+            <navigator>
+              <image class="icon-img sk-image"></image>
+              <view class="icon-text sk-transparent sk-text-14-2857-696 sk-text" style="background-position-x: 50%;">包包</view>
+            </navigator>
+          </view>
+          <view class="icon-navi" data-cateid="2">
+            <navigator>
+              <image class="icon-img sk-image"></image>
+              <view class="icon-text sk-transparent sk-text-14-2857-879 sk-text" style="background-position-x: 50%;">化妆品</view>
+            </navigator>
+          </view>
+          <view class="icon-navi" data-cateid="3">
+            <navigator>
+              <image class="icon-img sk-image"></image>
+              <view class="icon-text sk-transparent sk-text-14-2857-434 sk-text" style="background-position-x: 50%;">宝宝用品</view>
+            </navigator>
+          </view>
+          <view class="icon-navi" data-cateid="4">
+            <navigator>
+              <image class="icon-img sk-image"></image>
+              <view class="icon-text sk-transparent sk-text-14-2857-667 sk-text" style="background-position-x: 50%;">食物</view>
+            </navigator>
+          </view>
+          <view class="icon-navi" data-cateid="5">
+            <navigator>
+              <image class="icon-img sk-image"></image>
+              <view class="icon-text sk-transparent sk-text-14-2857-968 sk-text" style="background-position-x: 50%;">保健品</view>
+            </navigator>
+          </view>
+          <view class="icon-navi" data-cateid="6">
+            <navigator>
+              <image class="icon-img sk-image"></image>
+              <view class="icon-text sk-transparent sk-text-14-2857-320 sk-text" style="background-position-x: 50%;">服装</view>
+            </navigator>
+          </view>
+        </swiper-item>
+      </swiper>
+      <view class="category-title">
+        <view class="title">
+          <view class="text1 sk-transparent sk-text-25-0000-441 sk-text">环球精选</view>
+          <view class="line"></view>
+        </view>
+      </view>
+      <view class="choice_box">
+        <view class="choice_list">
+          <navigator>
+            <view class="choice_item">
+              <image class="sk-image"></image>
+              <view class="title sk-transparent">欧莱雅第二代紫熨斗眼霜补水保湿抗皱紧致淡纹
+                <text class="h sk-transparent sk-text-14-2857-801 sk-text" style="background-position-x: 50%;">￥ 289</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

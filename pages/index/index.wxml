@@ -1,5 +1,7 @@
 <!--index.wxml-->
-<view class="container">
+<import src="./index.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+<view class="container" wx:else>
     <view>
         <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
                 autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
@@ -66,8 +68,8 @@
         </view>
     </view>
 
-    <loading hidden="{{loadingHidden}}">
+    <!-- <loading hidden="{{loadingHidden}}">
         加载中...
-    </loading>
+    </loading> -->
 
 </view>

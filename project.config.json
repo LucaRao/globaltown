@@ -39,7 +39,8 @@
     "disableUseStrict": false,
     "minifyWXML": true,
     "showES6CompileOption": false,
-    "useCompilerPlugins": false
+    "useCompilerPlugins": false,
+    "skeletonGenerateFilesWithoutConfirm": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.19.6",
@@ -72,6 +73,43 @@
     },
     "miniprogram": {
       "list": []
+    }
+  },
+  "skeletonConfig": {
+    "global": {
+      "loading": "",
+      "text": {
+        "color": "#EEEEEE"
+      }
+    },
+    "image": {
+      "shape": "",
+      "color": "#EFEFEF",
+      "shapeOpposite": []
+    },
+    "button": {
+      "color": "#EFEFEF",
+      "excludes": []
+    },
+    "pseudo": {
+      "color": "#EFEFEF",
+      "shape": "circle",
+      "shapeOpposite": []
+    },
+    "excludes": [],
+    "remove": [],
+    "empty": [],
+    "hide": [],
+    "grayBlock": [],
+    "showNative": false,
+    "backgroundColor": "transparent",
+    "mode": "fullscreen",
+    "templateName": "skeleton",
+    "cssUnit": "rpx",
+    "decimal": 4
+  },
+  "pages": {
+    "pages/index/index": {
     }
   }
 }

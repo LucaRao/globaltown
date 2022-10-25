@@ -10,7 +10,7 @@ Page({
         autoplay: true,
         interval: 3000,
         duration: 1000,
-        loadingHidden: false // loading
+        loading: true,
     },
 
     //事件处理函数
@@ -31,45 +31,38 @@ Page({
 
         //venuesList
         const type_list = await supabase
-          .from('type_list')
-          .select().eq("if_choice",1)
-          if(type_list.data.data){
+            .from('type_list')
+            .select().eq("if_choice", 1)
+        if (type_list.data.data) {
             that.setData({
                 venuesItems: type_list.data.data
             })
-            setTimeout(function () {
-                that.setData({
-                    loadingHidden: true
-                })
-            }, 1500)
-          }
-        //choiceList
-        const choice_list = await supabase
-          .from('goods_by_type_brand')
-          .select().eq("boutique",1)
-          if(choice_list.data.data){
-            that.setData({
-                choiceItems: choice_list.data.data
+            setTimeout(async () => {
+                const choice_list = await supabase
+                    .from('goods_by_type_brand')
+                    .select().eq("boutique", 1)
+                if (choice_list.data.data) {
+                    that.setData({
+                        choiceItems: choice_list.data.data
+                    })
+                    setTimeout(async () => {
+                        const swiper_list = await supabase
+                            .from('goods_by_type_brand')
+                            .select().eq("swiper", 1)
+                        if (swiper_list.data.data) {
+                            that.setData({
+                                swiperItems: swiper_list.data.data
+                            })
+                            that.setData({
+                                loading:false
+                            })
+                        }
+                    })
+                }
             })
-            setTimeout(function () {
-                that.setData({
-                    loadingHidden: true
-                })
-            }, 1500)
-          }
-          const swiper_list = await supabase
-          .from('goods_by_type_brand')
-          .select().eq("swiper",1)
-          if(swiper_list.data.data){
-            that.setData({
-                swiperItems: swiper_list.data.data
-            })
-            setTimeout(function () {
-                that.setData({
-                    loadingHidden: true
-                })
-            }, 1500)
-          }
+            console.log(that.data.venuesItems, 'venuesItems')
+        }
+
 
     }
 })
